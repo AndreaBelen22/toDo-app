@@ -3,13 +3,13 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.bulkInsert(
-      "todoItems",
+      "toDoItems",
       [
         {
           task: "Practice Quidditch",
           deadline: "ASAP",
           important: true,
-          todoListId: 1,
+          toDoListId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -17,7 +17,7 @@ module.exports = {
           task: "Feed Crookshanks",
           deadline: "every morning",
           important: true,
-          todoListId: 2,
+          toDoListId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -25,7 +25,7 @@ module.exports = {
           task: "Break up with Lila",
           deadline: "ASAP",
           important: false,
-          todoListId: 3,
+          toDoListId: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -33,7 +33,7 @@ module.exports = {
           task: "Kill the basilisc",
           deadline: "before it kills everyone",
           important: true,
-          todoListId: 1,
+          toDoListId: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -41,7 +41,7 @@ module.exports = {
           task: "Plan a way to access the Restricted Section",
           deadline: "ASAP",
           important: false,
-          todoListId: 2,
+          toDoListId: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -49,7 +49,7 @@ module.exports = {
           task: "Find Scabbers, he's missing again",
           deadline: "now",
           important: false,
-          todoListId: 3,
+          toDoListId: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
@@ -58,6 +58,6 @@ module.exports = {
     );
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete("todoItems", null, {});
+    await queryInterface.bulkDelete("toDoItems", null, {});
   },
 };
